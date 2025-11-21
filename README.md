@@ -65,11 +65,9 @@ Open up a command line (terminal) prompt on your computer and navigate to a dire
 
 ### Get the code:
 
-git clone https://github.com/axbjos/inet_4031_flask.git
+git clone https://github.com/jongee2/inet4031-geometry-app.git
 
-This will download a copy of my repo on your system.  It is a complete separate copy.  You will not be able to modify my code in my repo (to do that I'd have to grant you a 'pull' request - which I will not).
-
-Go into the new directory that was created by the clone.  Use your favorite lightweight code editor (which should be Visual Studio Code) to look at the files.
+This will download a copy of my repo on your system.
 
 ### Run the code:
 
@@ -108,13 +106,13 @@ Now open up a browser and go to:
 
 http://localhost:5000
 
-Or put in the IP of your laptop instead of local host.  Either way point the URL to TCP port 5000.  By default Flask listens on 5000 so it doesn't interfere with other web servers you may have running like Apache or Nginx which listen on port 80 by default.
+Or put in the IP of your laptop instead of localhost.  Either way point the URL to TCP port 5000.  By default Flask listens on 5000 so it doesn't interfere with other web servers you may have running like Apache or Nginx which listen on port 80 by default.
 
 ## Unit Tests
 
 A Unit Test is a piece of code that is used to test other code.
 
-For example, the cylinderTest.py code "tests" the cylinder.py code.
+For example, the cylinderTest.py code "tests" the cylinder.py code and the sphereTest.py code tests the sphere.py code.
 
 Take a look and see if you can understand what's going on.  The Unit Test uses the Python "unittest" module to automatically run the tests.
 
@@ -126,25 +124,10 @@ Run the **cylinder** unit tests like this:
 
 python -m unittest cylinderTest.py
 
+or
+
+Run the **sphere** unit tests like this:
+
+python -m unittest sphereTest.py
+
 You should see that both tests in the Test file pass.
-
-(What does the GeometryCalcWebTest.py file test?)
-
-## Try It Yourself
-
-Using cylinder.py and cylinderTest.py, finish the functionality for the **sphere.py** file.  Then write a unit test for it: **sphereTest.py**
-
-## Continuous Integration (CI)
-
-In the *.github/workflows* folder is an example YAML file for defining a GitHub action.
-
-This will be discussed in class.
-
-This action can be used to have GitHub automatically run the unit tests whenever code is checked in to the repo.
-
-You will need to duplicate my repo to try this functionality yourself (we will discuss in class).
-
-
-# That's It!
-
-Please take the time to look through the code and understand it.  Better yet, show up to class and participate and learn, and understanding the code will be much easier.
